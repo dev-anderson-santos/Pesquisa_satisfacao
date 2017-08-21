@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+	<link rel="shortcut icon" href="imagens/favicon2.png" />
+	<link rel="shortcut icon" type="image/png" href="http://pesquisa.xhtml/favicon2.png"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Pesquisa de satisfação - relatório</title>
+
+	<style>
+#conteiner2 {
+	margin: 0px auto;
+	width: 500px;
+}
+</style>
+
+</h:head>
+<h:body>
+	<div id="conteiner2">
+		<h:form>
+			<center>
+
+				<p:dataTable value="#{pesquisaMBean.resultados}" var="resultado"
+					border="1" cellspacing="2" cellpadding="2"
+					emptyMessage="Nenhuma dado cadastrado">
+					<f:facet name="header">
+            			Pesquisa de satisfação - relatório
+        			</f:facet>
+					<p:column style="text-align: center;">
+						<f:facet name="header">
+						Opções escolhidas
+					</f:facet>
+						<h:outputText value="#{resultado.opcaoEscolhida}" />
+					</p:column>
+					<p:column style="text-align: center;">
+						<f:facet name="header">
+						Totais
+					</f:facet>
+						<h:outputText value="#{resultado.qtd}" />
+					</p:column>
+
+				</p:dataTable>
+				<p:dataTable value="#{pesquisaMBean.linhas}" var="r" emptyMessage="Nenhuma dado cadastrado">
+
+					<p:column style="text-align: center;">
+						<f:facet name="header">
+							Total de votos
+						</f:facet>
+						<h:outputText value="#{pesquisaMBean.resultados2}" />
+					</p:column>
+				</p:dataTable>
+				<br />
+				<h:button value="Atualizar" onclick="location.reload()" />
+			</center>
+		</h:form>
+	</div>
+</h:body>
+</html>

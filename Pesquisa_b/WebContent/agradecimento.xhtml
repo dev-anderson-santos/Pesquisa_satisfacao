@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<!--<meta http-equiv="refresh" content="5; url=pesquisa.xhtml" /-->
+
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Obrigado!</title>
+
+	<script>
+		function funcao() {
+			setTimeout(function() {
+				//window.location.replace('http://www.globo.com');
+				location.href="http://localhost:8080/Pesquisa_b/pesquisa.xhtml";
+			}, 5000);
+
+		}
+		
+	</script>
+
+</h:head>
+<h:body>
+	<center>
+		<img src="imagens/4.png" alt="Obrigado" onload="funcao()" /><br/>
+		<h1>Obrigado por votar!</h1>
+	</center>
+
+</h:body>
+</html>

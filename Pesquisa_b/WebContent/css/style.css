@@ -1,0 +1,36 @@
+#conteiner {
+	margin: 0px auto;
+	width: 1360px;
+	font-size: 1.5em;
+}
+
+@media screen and (max-width:1360px) {
+	#conteiner{
+		width: 100%;
+	}
+	img {
+		width: 28%;
+		height: 28%;
+	}
+}
+
+/* @media screen and (max-width:940px) {
+	#conteiner{
+		width: 100%;
+	}	
+	
+	img {
+		width: 30%;
+		height: 30%;
+	}
+}
+
+@media screen and (max-width:320px) {
+	#conteiner{
+		width: 100%;
+	}
+	img {
+		width: 20%;
+		height: 20%
+	}
+} */
